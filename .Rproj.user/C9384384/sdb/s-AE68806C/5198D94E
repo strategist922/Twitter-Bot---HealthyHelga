@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "library(twitteR)\nlibrary(tm)\nlibrary(stringr)\nlibrary(httr)\nlibrary(rvest)\nconsumer_key <- \"mbMi4KCyZxTbfvrQ4GTK2OWkV\"\nconsumer_secret <- \"pfx4VWrWyeEkVDvS4Hub1CEfoxl6VidSb4fjw4H7iiwrf2x3cJ\"\nauthor <- \"HealthyHelga\"\nauthor_id <- \"751358493723099137\"\naccess_token <- \"751358493723099137-4Y9WOo8pVvqTiKCVj86PxYO31XPkBph\"\naccess_secret <- \"ijZCBRPYLe56EJLzbBQ7Sqt6aeBCiIZgj5M7XA5iKWsji\"\nsetup_twitter_oauth(consumer_key, consumer_secret, access_token, access_secret)\n\n# Extract workout links\nworkouts <- read_html(\"http://greatist.com/bodyweight-workouts\")\nworkout_link <- workouts %>% html_nodes(css = \"div.description > a\")\nworkout_link <- html_attr(workout_link, name = \"href\")\nworkout_link\n\n# Extract descriptions\nworkout_des <- workouts %>% html_nodes(css = \"div.description > a > h2\")\nworkout_des\n# Clean descriptions\nworkout_des <- gsub(\"<h2>\", \"\", workout_des)\nworkout_des <- gsub(\"</h2>\", \"\", workout_des)\nworkout_des\n\n# Load the workout links into an RDA file\nsave(daily_workout, file = \"workouts.RData\")\nload(\"/media/sf_Shared_Folder/Twitter Bot - HealthyHelga/workouts.RData\")\n\ndaily_workout <- paste(\"#DailyWorkout:\", workout_link[1])\ndaily_workout\ntweet(daily_workout)\n\n# Delete top item in list from the vector\ndaily_workout <- daily_workout[-1]\n\n# Save workspace and RDA file without latest tweet info\nsave(daily_workout, file = \"workouts.RData\")",
+    "created" : 1468186369930.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4204382052",
+    "id" : "5198D94E",
+    "lastKnownWriteTime" : 1468186432,
+    "last_content_update" : 1468186432153,
+    "path" : "/media/sf_Shared_Folder/Twitter Bot - HealthyHelga/WorkoutAuto.R",
+    "project_path" : "WorkoutAuto.R",
+    "properties" : {
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

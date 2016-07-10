@@ -27,7 +27,7 @@ workout_des
 
 # Load the workout links into an RDA file
 save(daily_workout, file = "workouts.RData")
-load("~/Desktop/MyData/Data-Science-S2-Package-Week-1/TwitterBot/workouts.RData")
+load("/media/sf_Shared_Folder/Twitter Bot - HealthyHelga/workouts.RData")
 
 daily_workout <- paste("#DailyWorkout:", workout_link[1])
 daily_workout

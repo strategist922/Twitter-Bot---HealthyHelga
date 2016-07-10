@@ -16,11 +16,10 @@ setup_twitter_oauth(consumer_key, consumer_secret, access_token, access_secret)
 healthy_recipes <- read_html("https://fitfoodhealthprogram.wordpress.com/recipes/omnivore-entrees/")
 recipe_links <- healthy_recipes %>% html_node(css = "#post-108 > div > ul") %>% html_children() %>% html_children()
 recipe_links <- html_attr(recipe_links, name = "href")
-recipe_links
 
 # Load the recipe links into an RDA file
 save(recipe_links, file = "recipes.RData")
-load("~/Documents/Claire's Documents/iXperience/Week 2/HealthyHelga/Twitter-Bot---HealthyHelga/Twitter-Bot---HealthyHelga/recipes.RData")
+load("/media/sf_Shared_Folder/Twitter Bot - HealthyHelga/recipes.RData")
 
 # Post top recipe (in the RDA file) with introductory statement
 day_recipe <- paste("#dailyrecipe", recipe_links[1])
