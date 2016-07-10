@@ -1,14 +1,14 @@
 {
     "collab_server" : "",
-    "contents" : "library(twitteR)\nlibrary(tm)\nlibrary(stringr)\nlibrary(rvest)\nlibrary(dplyr)\n\nconsumer_key = 'mbMi4KCyZxTbfvrQ4GTK2OWkV'\nconsumer_secret = 'pfx4VWrWyeEkVDvS4Hub1CEfoxl6VidSb4fjw4H7iiwrf2x3cJ'\naccess_token = '751358493723099137-4Y9WOo8pVvqTiKCVj86PxYO31XPkBph' \naccess_secret = 'ijZCBRPYLe56EJLzbBQ7Sqt6aeBCiIZgj5M7XA5iKWsji'\n\nsetup_twitter_oauth(consumer_key, consumer_secret, access_token, access_secret)\n\n\nload(\"/media/sf_Shared_Folder/Twitter Bot - HealthyHelga/selfcare.RData\")\n\n\nselfcare_daily <- paste(\"#WTD\", selfcare.list[1])\n\ntweet(selfcare_daily)\n\nselfcare.list <- selfcare.list[-1]\n\n\n\n\nsave(selfcare.list, file = \"selfcare.RData\")\n",
+    "contents" : "library(twitteR)\nlibrary(tm)\nlibrary(stringr)\nlibrary(rvest)\nlibrary(dplyr)\n\nconsumer_key = 'mbMi4KCyZxTbfvrQ4GTK2OWkV'\nconsumer_secret = 'pfx4VWrWyeEkVDvS4Hub1CEfoxl6VidSb4fjw4H7iiwrf2x3cJ'\naccess_token = '751358493723099137-4Y9WOo8pVvqTiKCVj86PxYO31XPkBph' \naccess_secret = 'ijZCBRPYLe56EJLzbBQ7Sqt6aeBCiIZgj5M7XA5iKWsji'\n\nsetup_twitter_oauth(consumer_key, consumer_secret, access_token, access_secret)\n\n\nload(\"/media/sf_Shared_Folder/Twitter Bot - HealthyHelga/selfcare.RData\")\n\n\nselfcare_daily <- paste(\"#WTD\", selfcare.list[1])\n\ntweet(selfcare_daily)\n\nselfcare.list <- selfcare.list[-1]\n\n\nsave(selfcare.list, file = \"/media/sf_Shared_Folder/Twitter Bot - HealthyHelga/selfcare.RData\")\n\n\n\n",
     "created" : 1468179912059.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "874113273",
+    "hash" : "212867502",
     "id" : "994607E6",
-    "lastKnownWriteTime" : 1468183657,
-    "last_content_update" : 1468183657167,
+    "lastKnownWriteTime" : 1468190236,
+    "last_content_update" : 1468189960628,
     "path" : "/media/sf_Shared_Folder/Twitter Bot - HealthyHelga/SelfcareAuto.R",
     "project_path" : "SelfcareAuto.R",
     "properties" : {

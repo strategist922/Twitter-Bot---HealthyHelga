@@ -22,6 +22,7 @@ tweet(selfcare_daily)
 selfcare.list <- selfcare.list[-1]
 
 
+save(selfcare.list, file = "/media/sf_Shared_Folder/Twitter Bot - HealthyHelga/selfcare.RData")
 
 
-save(selfcare.list, file = "selfcare.RData")
+
