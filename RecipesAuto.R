@@ -26,7 +26,7 @@ load("/media/sf_Shared_Folder/Twitter Bot - HealthyHelga/recipes.RData")
 
 
 # Post top recipe (in the RDA file) with introductory statement
-day_recipe <- paste("#dailyrecipe", recipe_links[1])
+day_recipe <- paste("#recipeoftheday", recipe_links[1])
 tweet(day_recipe)
 
 # Delete the posted (top item in the recipe list) from the vector

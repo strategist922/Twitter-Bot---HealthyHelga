@@ -29,7 +29,7 @@ setup_twitter_oauth(consumer_key, consumer_secret, access_token, access_secret)
 # save(workout_link, file = "workouts.RData")
 load("/media/sf_Shared_Folder/Twitter Bot - HealthyHelga/workouts.RData")
 
-daily_workout <- paste("#DailyWorkout:", workout_link[1])
+daily_workout <- paste("workoutoftheday:", workout_link[1])
 
 tweet(daily_workout)
 
